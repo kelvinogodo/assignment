@@ -1,5 +1,4 @@
 // src/components/common/Navbar.jsx
-import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
@@ -13,21 +12,21 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-blue-700">
+    <header className="">
+      <nav className="">
+        <Link to="/" className="">
           🏛️ Commission Portal
         </Link>
 
-        <div className="flex items-center gap-4 text-sm">
+        <div className="">
           {user ? (
             <>
-              <span className="text-gray-600">
+              <span className="">
                 Logged in as <strong>{user.role.toUpperCase()}</strong>
               </span>
               <button
                 onClick={handleLogout}
-                className="bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded"
+                className=""
               >
                 Logout
               </button>
@@ -36,7 +35,7 @@ const Navbar = () => {
             <>
               <Link
                 to="/login"
-                className="text-blue-600 hover:underline font-medium"
+                className=""
               >
                 Login
               </Link>
